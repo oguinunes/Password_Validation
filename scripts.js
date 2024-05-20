@@ -55,3 +55,17 @@ switch(score) {
         strengthText.innerHTML = ""
     }
 })
+
+function showPass(){
+    const passwordInput = document.getElementById("passwordInput")
+    const btnShow = document.getElementById('btn-pass')
+
+    if(passwordInput.type === 'password'){
+        passwordInput.type = 'text' //turn text so I can see it
+        btnShow.classList.replace('bi-eye-fill', ('bi-eye-slash-fill'))
+    } else{
+        passwordInput.type = "password"
+        btnShow.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+    }
+}
+
